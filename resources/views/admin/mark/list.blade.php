@@ -36,7 +36,7 @@
                             <td>{{ $mark->total_mark }}</td>
                             <td>
     
-                                <form action="{{ route('student-mark.destroy', $mark->id) }}" method="POST">
+                                <form action="{{ route('student-mark.destroy', $mark->id) }}" method="POST" onsubmit="return confirm('{{'Are you sure to delete'}}');">
     
                                     <a href="{{ route('student-mark.edit', $mark->id) }}" class="btn btn-primary">
                                         <i class="fas fa-edit  fa-lg"></i>Edit

@@ -21,7 +21,7 @@
                                     @endforeach
                                 </select>
                                 @error('student_id')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -35,7 +35,7 @@
                                     @endforeach
                                 </select>
                                 @error('term_id')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -44,7 +44,7 @@
                                 <label for="exampleInputEmail1">Maths</label>
                                 <input type="number" name="maths" class="form-control" id="exampleInputEmail1">
                                 @error('maths')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -53,7 +53,7 @@
                                 <label for="exampleInputEmail1">Science</label>
                                 <input type="number" name="science" class="form-control" id="exampleInputEmail1">
                                 @error('science')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -62,7 +62,7 @@
                                 <label for="exampleInputEmail1">History</label>
                                 <input type="number" name="history" class="form-control" id="exampleInputEmail1">
                                 @error('history')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror

@@ -22,7 +22,7 @@
                                     @endforeach
                                 </select>
                                 @error('student_id')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -36,7 +36,7 @@
                                     @endforeach
                                 </select>
                                 @error('term_id')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -45,7 +45,7 @@
                                 <label for="exampleInputmaths">Maths</label>
                                 <input type="number" name="maths" class="form-control" id="exampleInputmaths" value="{{$mark->maths}}">
                                 @error('maths')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -54,7 +54,7 @@
                                 <label for="exampleInputScience">Science</label>
                                 <input type="number" name="science" class="form-control" id="exampleInputScience" value="{{$mark->science}}">
                                 @error('science')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -63,7 +63,7 @@
                                 <label for="exampleInputhistory">History</label>
                                 <input type="number" name="history" class="form-control" id="exampleInputhistory" value="{{$mark->history}}">
                                 @error('history')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror

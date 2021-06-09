@@ -25,8 +25,8 @@
     
                             <th>Action</th>
                         </tr>
-                        @foreach ($students as $key=> $student)
                         @php $i = $students->perPage() * ($students->currentPage() - 1); @endphp
+                        @foreach ($students as $key=> $student)
                         <tr>
                             <td>{{++$i }}</td>
                             <td>{{ $student->name }}</td>
@@ -36,7 +36,7 @@
                             <td>{{ $student->reportingTo->name }}</td>
                             <td>
     
-                                <form action="{{ route('student.destroy', $student->id) }}" method="POST">
+                                <form action="{{ route('student.destroy', $student->id) }}" method="POST" onsubmit="return confirm('{{'Are you sure to delete'}}');" >
     
                                     <a href="{{ route('student.edit', $student->id) }}" class="btn btn-primary">
                                         <i class="fas fa-edit  fa-lg"></i>Edit

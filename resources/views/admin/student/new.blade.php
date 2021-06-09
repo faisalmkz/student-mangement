@@ -17,7 +17,7 @@
                                 <label for="exampleInputEmail1">Name</label>
                                 <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
                                 @error('name')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -26,7 +26,7 @@
                                 <label for="age">Age</label>
                                 <input type="number" name="age" class="form-control" id="age" placeholder="Age">
                                 @error('age')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -42,7 +42,7 @@
                                     <label class="form-check-label" for="inlineRadio2">Female</label>
                                 </div>
                                 @error('gender')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -57,7 +57,7 @@
                                                     @endforeach
                                 </select>
                                 @error('standard_id')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
@@ -71,7 +71,7 @@
                                                     @endforeach
                                 </select>
                                 @error('reporting_to')
-                                <p class="alert alert-danger">
+                                <p class="text text-danger">
                                     {{ $message }}
                                 </p>
                                 @enderror
