@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MarkRequest;
 use App\Models\StudentMark;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -46,18 +47,9 @@ class StudentMarkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MarkRequest $request)
     {
-        $request->validate([
-            'student_id' => 'required',
-            'term_id' => 'required',
-            'maths' => 'required',
-            'science' => 'required',
-            'history' => 'required',
-        ],  [
-            'student_id.required' => 'student field is required',
-            'term_id.required' => 'term field is required',
-        ]);
+       
         StudentMark::create($request->all());
         return redirect()->route('student-mark.index')->with('success', 'Mark added successfully.');
     }
@@ -94,18 +86,9 @@ class StudentMarkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MarkRequest $request, $id)
     {
-        $request->validate([
-            'student_id' => 'required',
-            'term_id' => 'required',
-            'maths' => 'required',
-            'science' => 'required',
-            'history' => 'required',
-        ], [
-            'student_id.required' => 'student field is required',
-            'term_id.required' => 'term field is required',
-        ]);
+        
         $mark = StudentMark::find($id);
         $mark->student_id = $request->student_id;
         $mark->term_id = $request->term_id;
